@@ -5,8 +5,8 @@ metadata:
   namespace: argocd
 spec:
   source:
-    repoURL: git@github.com:waleedmagdy/devops_project.git
-    path: manifests/kubernetes/productpage
+    repoURL: https://jenisakthi@github.com/jenisakthi/k8-app-sample.git
+    path: kubernetes/productpage
   destination:
     server: https://kubernetes.default.svc
     namespace: staging
