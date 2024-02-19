@@ -8,8 +8,8 @@ on:
       - 'bookinfo_app/src/ratings/**'
 
 env:
-  ECR_REGISTRY: 654328202400.dkr.ecr.us-east-1.amazonaws.com
-  ECR_REPOSITORY: my-ecr-repo
+  ECR_REGISTRY: 562041613760.dkr.ecr.us-east-1.amazonaws.com
+  ECR_REPOSITORY: tc-poc
 
 jobs:
   build_and_push_image:
