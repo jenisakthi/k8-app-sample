@@ -5,7 +5,7 @@ metadata:
   namespace: argocd
 spec:
   source:
-    repoURL: https://jenisakthi@github.com/jenisakthi/k8-app-sample.git
+    repoURL: https://github.com/jenisakthi/k8-app-sample.git
     path: kubernetes/mongodb
   destination:
     server: https://kubernetes.default.svc
