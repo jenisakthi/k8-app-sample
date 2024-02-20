@@ -6,7 +6,7 @@ metadata:
 spec:
   source:
     repoURL: https://github.com/jenisakthi/k8-app-sample.git
-    path: networking/gateways/
+    path: kubernetes/gateways
   destination:
     server: https://kubernetes.default.svc
     namespace: staging
