@@ -12,3 +12,9 @@ spec:
   project: default
   syncPolicy:
     automated: {}
+    retry:
+      limit: 5
+      backoff:
+        duration: 60s
+        factor: 2
+        maxDuration: 6m0s
