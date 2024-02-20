@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: details
+  namespace: staging
+spec:
+  source:
+    repoURL: https://github.com/jenisakthi/k8-app-sample.git
+    path: networking/gateways/
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: staging
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
