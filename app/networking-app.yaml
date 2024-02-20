@@ -2,11 +2,12 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: networkapp
-  namespace: staging
+  namespace: argocd
+  targetRevision: HEAD
 spec:
   source:
     repoURL: https://github.com/jenisakthi/k8-app-sample.git
-    path: kubernetes/gateways
+    path: kubernetes/gateways/
   destination:
     server: https://kubernetes.default.svc
     namespace: staging
