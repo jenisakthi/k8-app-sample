@@ -41,3 +41,14 @@ spec:
         host: productpage
         port:
           number: 9080
+---
+apiVersion: networking.istio.io/v1beta1
+kind: DestinationRule
+metadata:
+  name: booking-info
+  namespace: istio-system
+spec:
+  host: booking
+  trafficPolicy:
+    tls:
+      mode: DISABLE
