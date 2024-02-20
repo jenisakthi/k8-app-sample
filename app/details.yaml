@@ -12,6 +12,6 @@ spec:
     namespace: staging
   project: default
   syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
+    automated: {}
+    syncOptions:
+      - Replace=true
