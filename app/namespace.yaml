@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: namespace
+  namespace: argocd
+spec:
+  source:
+    repoURL: https://github.com/jenisakthi/k8-app-sample.git
+    path: kubernetes/namespace
+  destination:
+    server: https://kubernetes.default.svc
+  project: default
+  syncPolicy:
+    automated: {}
