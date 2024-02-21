@@ -10,7 +10,7 @@ metadata:
     chart: prometheus-19.6.1
     heritage: Helm
   name: prometheus
-  namespace: istio-system
+  namespace: monitoring
   annotations:
     {}
 ---
@@ -25,7 +25,7 @@ metadata:
     chart: prometheus-19.6.1
     heritage: Helm
   name: prometheus
-  namespace: istio-system
+  namespace: monitoring
 data:
   allow-snippet-annotations: "false"
   alerting_rules.yml: |
@@ -426,7 +426,7 @@ metadata:
 subjects:
   - kind: ServiceAccount
     name: prometheus
-    namespace: istio-system
+    namespace: monitoring
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
@@ -443,7 +443,7 @@ metadata:
     chart: prometheus-19.6.1
     heritage: Helm
   name: prometheus
-  namespace: istio-system
+  namespace: monitoring
 spec:
   ports:
     - name: http
@@ -468,7 +468,7 @@ metadata:
     chart: prometheus-19.6.1
     heritage: Helm
   name: prometheus
-  namespace: istio-system
+  namespace: monitoring
 spec:
   selector:
     matchLabels:

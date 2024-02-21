@@ -1,0 +1,1 @@
+Redirecting to https://raw.githubusercontent.com/istio/istio/master/release/downloadIstioCandidate.sh
