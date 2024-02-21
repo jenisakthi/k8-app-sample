@@ -8,9 +8,9 @@ spec:
   source:
     chart: istio
     repoURL: https://istio-release.storage.googleapis.com/charts
-    targetRevision: base-1.16.1
+    targetRevision: 1.20.3
     helm:
       releaseName: istio
   destination:
     server: "https://kubernetes.default.svc"
-    namespace: istio	
+    namespace: istio-system   	
