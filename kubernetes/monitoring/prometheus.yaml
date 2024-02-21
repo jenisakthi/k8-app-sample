@@ -16,22 +16,12 @@ metadata:
 ---
 # Source: prometheus/templates/cm.yaml
 apiVersion: v1
-kind: ConfigMap
-metadata:
-  labels:
-    component: "server"
-    app: prometheus
-    release: prometheus
-    chart: prometheus-19.6.1
-    heritage: Helm
-  name: prometheus
-  namespace: monitoring
 data:
-  allow-snippet-annotations: "false"
   alerting_rules.yml: |
     {}
   alerts: |
     {}
+  allow-snippet-annotations: 'false'
   prometheus.yml: |
     global:
       evaluation_interval: 1m
@@ -338,6 +328,18 @@ data:
     {}
   rules: |
     {}
+kind: ConfigMap
+metadata:
+  labels:
+    app: prometheus
+    app.kubernetes.io/instance: monitoring-stack
+    chart: prometheus-19.6.1
+    component: server
+    heritage: Helm
+    release: prometheus
+  name: prometheus
+  namespace: monitoring
+
 ---
 # Source: prometheus/templates/clusterrole.yaml
 apiVersion: rbac.authorization.k8s.io/v1
