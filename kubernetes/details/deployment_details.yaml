@@ -20,7 +20,7 @@ spec:
       serviceAccountName: bookinfo-details
       containers:
       - name: details
-        image: 562041613760.dkr.ecr.us-east-1.amazonaws.com/tc-poc:details-14b35c5
+        image: 562041613760.dkr.ecr.us-east-1.amazonaws.com/tc-poc:details-97a9f6a
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 9080
